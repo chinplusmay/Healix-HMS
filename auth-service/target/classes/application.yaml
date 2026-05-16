@@ -1,0 +1,54 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: auth-service
+
+  # Local dev uses the H2 in-memory profile by default so `mvnw spring-boot:run`
+  # works with no external DB. Override in any other environment with the
+  # SPRING_PROFILES_ACTIVE env var (e.g. SPRING_PROFILES_ACTIVE=prod) or with
+  # -Dspring-boot.run.profiles=prod on the command line.
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:hms_auth}?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+
+app:
+  jwt:
+    # Base64-encoded HMAC-SHA secret. MUST be at least 256 bits (32 bytes) when decoded.
+    # Override in production via the JWT_SECRET environment variable.
+    secret: ${JWT_SECRET:ZmQ0ZGI5NjQ0MDQwY2I4MjMxY2Y3ZmI3MjdhN2ZmMjNhODViOTg1ZGE0NTBjMGM4NDA5NzYxMjdjOWMwYWRmZQ==}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+    issuer: healix-hms-auth
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when_authorized

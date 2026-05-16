@@ -1,0 +1,16 @@
+# Activated with: --spring.profiles.active=dev   (or env: SPRING_PROFILES_ACTIVE=dev)
+#
+# Overrides ONLY the datasource so auth-service can run with no external dependencies.
+# Everything else (port 8082, JWT config, Eureka client) is inherited from application.yaml.
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:hms_auth;MODE=MySQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
