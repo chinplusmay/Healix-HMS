@@ -342,5 +342,70 @@ POST /api/v1/auth/login
 ## Create Patient
 
 ```http
-POST /api/v1/p
+POST /api/v1/patients
 ```
+
+---
+
+## Create Doctor
+
+```http
+POST /api/v1/doctors
+```
+
+---
+
+## Create Appointment
+
+```http
+POST /api/v1/appointments
+```
+
+Sample Request:
+
+```json
+{
+  "patientId": 1,
+  "doctorId": 1,
+  "appointmentDate": "2026-05-20T10:30:00Z",
+  "status": "SCHEDULED",
+  "notes": "Regular checkup"
+}
+```
+
+---
+
+# 🧠 Concepts Implemented
+
+* Microservices Architecture
+* API Gateway Pattern
+* Service Discovery
+* JWT Authentication
+* Role-based Authorization
+* Feign Client Communication
+* Distributed Validation
+* Exception Handling
+* DTO Pattern
+* Layered Architecture
+* REST API Design
+* Database Profiles
+
+---
+
+# 🔮 Future Improvements
+
+* Docker & Docker Compose
+* Swagger/OpenAPI documentation
+* Redis caching
+* Kafka notifications
+* Kubernetes deployment
+* CI/CD pipeline
+* React frontend
+* Appointment slot management
+* Payment integration
+
+---
+
+# 👨‍💻 Author
+
+Built as a backend microservices learning project using Spring Boot and Spring Cloud.
