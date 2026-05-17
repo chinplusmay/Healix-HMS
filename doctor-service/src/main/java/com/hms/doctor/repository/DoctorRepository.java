@@ -1,0 +1,23 @@
+package com.hms.doctor.repository;
+
+import com.hms.doctor.entity.Availability;
+import com.hms.doctor.entity.Doctor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface DoctorRepository extends JpaRepository<Doctor, Long> {
+
+    Optional<Doctor> findByEmail(String email);
+
+    boolean existsByEmail(String email);
+
+    /** Useful for "find me an available cardiologist" style filters. */
+    Page<Doctor> findBySpecializationIgnoreCaseAndAvailability(String specialization,
+                                                               Availability availability,
+                                                               Pageable pageable);
+}

@@ -1,0 +1,285 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.hms:appointment-service >---------------------
+[INFO] Building appointment-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.0:run (default-cli) > test-compile @ appointment-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ appointment-service ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ appointment-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ appointment-service ---
+[INFO] skip non existing resourceDirectory D:\Projects\Healix HMS\appointment-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ appointment-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.5.0:run (default-cli) < test-compile @ appointment-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.0:run (default-cli) @ appointment-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2026-05-17T17:03:26.210+05:30  INFO 22648 --- [appointment-service] [           main] c.h.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication using Java 17.0.19 with PID 22648 (D:\Projects\Healix HMS\appointment-service\target\classes started by zchin in D:\Projects\Healix HMS\appointment-service)
+2026-05-17T17:03:26.216+05:30  INFO 22648 --- [appointment-service] [           main] c.h.a.AppointmentServiceApplication      : The following 1 profile is active: "dev"
+2026-05-17T17:03:28.954+05:30  INFO 22648 --- [appointment-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-17T17:03:29.365+05:30  INFO 22648 --- [appointment-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 381 ms. Found 1 JPA repository interface.
+2026-05-17T17:03:29.613+05:30  INFO 22648 --- [appointment-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f93f5796-19b3-38f2-8c38-1282c0d800e4
+2026-05-17T17:03:30.288+05:30  INFO 22648 --- [appointment-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-05-17T17:03:30.334+05:30  INFO 22648 --- [appointment-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-17T17:03:30.336+05:30  INFO 22648 --- [appointment-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-05-17T17:03:30.521+05:30  INFO 22648 --- [appointment-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-17T17:03:30.524+05:30  INFO 22648 --- [appointment-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4197 ms
+2026-05-17T17:03:31.240+05:30  INFO 22648 --- [appointment-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-17T17:03:31.501+05:30  INFO 22648 --- [appointment-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-05-17T17:03:31.614+05:30  INFO 22648 --- [appointment-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-17T17:03:32.217+05:30  INFO 22648 --- [appointment-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-17T17:03:32.277+05:30  INFO 22648 --- [appointment-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-17T17:03:32.685+05:30  INFO 22648 --- [appointment-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:hms_appointment user=SA
+2026-05-17T17:03:32.688+05:30  INFO 22648 --- [appointment-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-17T17:03:32.830+05:30  INFO 22648 --- [appointment-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-17T17:03:34.399+05:30  INFO 22648 --- [appointment-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists appointments cascade 
+Hibernate: 
+    create table appointments (
+        appointment_date timestamp(6) with time zone not null,
+        created_at timestamp(6) with time zone not null,
+        doctor_id bigint not null,
+        id bigint generated by default as identity,
+        patient_id bigint not null,
+        updated_at timestamp(6) with time zone not null,
+        notes varchar(1000),
+        status enum ('CANCELLED','COMPLETED','SCHEDULED') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create index idx_appt_patient 
+       on appointments (patient_id)
+Hibernate: 
+    create index idx_appt_doctor 
+       on appointments (doctor_id)
+Hibernate: 
+    create index idx_appt_status 
+       on appointments (status)
+Hibernate: 
+    create index idx_appt_date 
+       on appointments (appointment_date)
+2026-05-17T17:03:34.609+05:30  INFO 22648 --- [appointment-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-17T17:03:35.372+05:30  INFO 22648 --- [appointment-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'patient-service' URL not provided. Will try picking an instance via load-balancing.
+2026-05-17T17:03:35.439+05:30  INFO 22648 --- [appointment-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'doctor-service' URL not provided. Will try picking an instance via load-balancing.
+2026-05-17T17:03:36.398+05:30  INFO 22648 --- [appointment-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-05-17T17:03:36.446+05:30  WARN 22648 --- [appointment-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-17T17:03:36.464+05:30  INFO 22648 --- [appointment-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-05-17T17:03:36.566+05:30  INFO 22648 --- [appointment-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-17T17:03:36.598+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-17T17:03:36.604+05:30  INFO 22648 --- [appointment-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-17T17:03:36.617+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-17T17:03:36.642+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-17T17:03:36.665+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-17T17:03:36.666+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-17T17:03:36.667+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-17T17:03:36.668+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-17T17:03:36.668+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-17T17:03:37.309+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-17T17:03:37.313+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-17T17:03:37.316+05:30  INFO 22648 --- [appointment-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-17T17:03:37.321+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1779017617320 with initial instances count: 4
+2026-05-17T17:03:37.327+05:30  INFO 22648 --- [appointment-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application APPOINTMENT-SERVICE with eureka with status UP
+2026-05-17T17:03:37.329+05:30  INFO 22648 --- [appointment-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1779017617329, current=UP, previous=STARTING]
+2026-05-17T17:03:37.333+05:30  INFO 22648 --- [appointment-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LAPTOP-1V2CL6RB:appointment-service:8085: registering service...
+2026-05-17T17:03:37.369+05:30  INFO 22648 --- [appointment-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-05-17T17:03:37.385+05:30  INFO 22648 --- [appointment-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2026-05-17T17:03:37.387+05:30  INFO 22648 --- [appointment-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LAPTOP-1V2CL6RB:appointment-service:8085 - registration status: 204
+2026-05-17T17:03:37.523+05:30  INFO 22648 --- [appointment-service] [           main] c.h.a.AppointmentServiceApplication      : Started AppointmentServiceApplication in 12.693 seconds (process running for 13.985)
+2026-05-17T17:04:27.335+05:30  INFO 22648 --- [appointment-service] [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-17T17:04:27.338+05:30  INFO 22648 --- [appointment-service] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-17T17:04:27.342+05:30  INFO 22648 --- [appointment-service] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: 
+    insert 
+    into
+        appointments
+        (appointment_date, created_at, doctor_id, notes, patient_id, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-05-17T17:04:27.952+05:30  INFO 22648 --- [appointment-service] [nio-8085-exec-1] c.h.a.service.AppointmentService         : Created appointment id=1 patientId=1 doctorId=1 on=2026-05-18T11:34:27Z
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.appointment_date,
+        a1_0.created_at,
+        a1_0.doctor_id,
+        a1_0.notes,
+        a1_0.patient_id,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        appointments a1_0 
+    order by
+        a1_0.appointment_date 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-05-17T17:04:28.746+05:30  WARN 22648 --- [appointment-service] [nio-8085-exec-4] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.appointment_date,
+        a1_0.created_at,
+        a1_0.doctor_id,
+        a1_0.notes,
+        a1_0.patient_id,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        appointments a1_0 
+    where
+        a1_0.patient_id=? 
+    order by
+        a1_0.appointment_date 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.appointment_date,
+        a1_0.created_at,
+        a1_0.doctor_id,
+        a1_0.notes,
+        a1_0.patient_id,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        appointments a1_0 
+    where
+        a1_0.id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.appointment_date,
+        a1_0.created_at,
+        a1_0.doctor_id,
+        a1_0.notes,
+        a1_0.patient_id,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        appointments a1_0 
+    where
+        a1_0.id=?
+2026-05-17T17:04:29.045+05:30  INFO 22648 --- [appointment-service] [nio-8085-exec-8] c.h.a.service.AppointmentService         : Appointment id=1 status COMPLETED -> COMPLETED
+Hibernate: 
+    update
+        appointments 
+    set
+        appointment_date=?,
+        doctor_id=?,
+        notes=?,
+        patient_id=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.appointment_date,
+        a1_0.created_at,
+        a1_0.doctor_id,
+        a1_0.notes,
+        a1_0.patient_id,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        appointments a1_0 
+    where
+        a1_0.id=?
+Hibernate: 
+    insert 
+    into
+        appointments
+        (appointment_date, created_at, doctor_id, notes, patient_id, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+2026-05-17T17:04:29.216+05:30  INFO 22648 --- [appointment-service] [nio-8085-exec-3] c.h.a.service.AppointmentService         : Created appointment id=2 patientId=1 doctorId=1 on=2026-05-18T11:34:27Z
+Hibernate: 
+    select
+        count(*) 
+    from
+        appointments a1_0 
+    where
+        a1_0.id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.appointment_date,
+        a1_0.created_at,
+        a1_0.doctor_id,
+        a1_0.notes,
+        a1_0.patient_id,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        appointments a1_0 
+    where
+        a1_0.id=?
+2026-05-17T17:04:29.698+05:30  INFO 22648 --- [appointment-service] [nio-8085-exec-4] c.h.a.service.AppointmentService         : Deleted appointment id=2
+Hibernate: 
+    delete 
+    from
+        appointments 
+    where
+        id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.appointment_date,
+        a1_0.created_at,
+        a1_0.doctor_id,
+        a1_0.notes,
+        a1_0.patient_id,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        appointments a1_0 
+    where
+        a1_0.id=?
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:44 min
+[INFO] Finished at: 2026-05-17T17:04:56+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.5.0:run (default-cli) on project appointment-service: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

@@ -17,20 +17,32 @@ spring:
               filters:
                 - StripPrefix=1
 
+            - id: patient-service
+              uri: lb://PATIENT-SERVICE
+              predicates:
+                - Path=/api/v1/patients/**
+
+            - id: doctor-service
+              uri: lb://DOCTOR-SERVICE
+              predicates:
+                - Path=/api/v1/doctors/**
+
+            - id: appointment-service
+              uri: lb://APPOINTMENT-SERVICE
+              predicates:
+                - Path=/api/v1/appointments/**
+
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-    register-with-eureka: true
-    fetch-registry: true
-  instance:
-    prefer-ip-address: true
+      defaultZone: http://localhost:8761/eureka
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,gateway
+        include: gateway,health,info
+
   endpoint:
     gateway:
       access: unrestricted

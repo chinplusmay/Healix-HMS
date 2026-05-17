@@ -1,0 +1,15 @@
+# Activated by the default `spring.profiles.active=dev` in application.yaml.
+# Overrides ONLY the datasource so appointment-service can run with no external DB.
+# Everything else (port 8085, Eureka, Feign timeouts, validation, etc.) is inherited.
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:hms_appointment;MODE=MySQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
